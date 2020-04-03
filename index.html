@@ -6,10 +6,19 @@
   <title>ScratchUpload</title>
 </head>
 <body>
-  <input type="file" name="image" id="image" accept="image/*">
-  <button type="submit" onclick="upload()">Upload</button>
-  <img src="" style='height: 50px; width: 50px;'>
-  <p id='bbcode'></p>
+  <div style='text-align: center;'>
+    <input type="file" name="image" id="image" accept="image/*">
+    <button type="submit" onclick="upload()">Upload</button>
+    <img src="" style='height: 50px; width: 50px;'>
+    <p id='bbcode'>[BBcode goes here]</p>
+  </div>
+  
+  <h4>About</h4>
+  <p>This is my very simple and ugly image uploader for the Scratch forums. It automatically uploads your images to a whitelisted image hoster without ads or required sign up. Just copy and paste the generated code in your post and you're set.</p>
+  <p>You may already know that CubeUpload, the main image hosting site people on the Scratch forums use, is on the brim of shutting down because of lack of funding. ImgBB is being considered as a replacement by the Scratch Team, but it hasn't been added yet because technically CubeUpload still works.</p>
+  <p>This website uses the ImgBB API to upload images directly and hosts the URL under Wikimedia, which is an allowed image hoster.</p>
+  <p>You may get an alert if you share this website on Scratch because this is technically considered a security exploit. You won't get an alert for using this trick though, and the method I'm using is very simple and safe. You can look through the code yourself <a href="https://github.com/Fupicat/ScratchUpload">here</a>.</p>
+  <p>You can reach me via my <a href="https://scratch.mit.edu/users/Fupicat">Scratch profile</a> or email: fupicat at gmail dot com.</p>
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/upload.js"></script>
