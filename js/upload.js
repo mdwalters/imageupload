@@ -1,13 +1,14 @@
 function upload() {
+
   let img = document.getElementById('image').files[0];
+
   let reader = new FileReader();
-  var key = document.getElementById("key").value;
-  
+    
   reader.addEventListener("load", function () {
     document.getElementsByTagName('img')[0].src = reader.result;
-    
+
     let data = new FormData();
-    data.append('key', key);
+    data.append('key', '71260637fa6e63bff7f0bb6c6279ca4b');
     data.append('image', img);
 
     $.ajax({
@@ -26,11 +27,10 @@ function upload() {
 }
 
 function error(data) {
-  alert('Error! Images must be JPG, PNG, BMP, GIF, TIF, WEBP or HEIC. 32 MB max.');
+  alert('Error! Images must be JPG, PNG, BMP, GIF, TIF, WEBP or HEIC. 32 MB max.' + data);
 }
 
 function showMe(data) {
-  var id = data['data']['id'];
-  var file = data['data']['image']['filename'];
-  document.getElementById('bbcode').textContent = `https://i.ibb.co/${id}/${title}`;
+  let url = data['data']['url'];
+  document.getElementById('bbcode').textContent = url;
 }
