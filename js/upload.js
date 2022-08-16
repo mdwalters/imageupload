@@ -1,8 +1,3 @@
-const url_vars = new URLSearchParams(queryString);
-if(url_vars.has('id') && url_vars.has('file')) {
-  load(url_vars.get('id'), url_vars.get('file'));
-}
-
 function upload() {
 
   let img = document.getElementById('image').files[0];
@@ -38,9 +33,5 @@ function error(data) {
 function showMe(data) {
   var id = data['data']['id'];
   var file = data['data']['image']['filename'];
-  document.getElementById('bbcode').textContent = `https://${window.location.hostname}/?id=${id}&file=${file}`;
-}
-
-function load(id, title) {
-  location.replace(`https://i.ibb.co/${id}/${title}`);
+  document.getElementById('bbcode').textContent = `https://i.ibb.co/${id}/${title}`;
 }
