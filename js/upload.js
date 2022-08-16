@@ -1,12 +1,10 @@
 function upload() {
-
   let img = document.getElementById('image').files[0];
-
   let reader = new FileReader();
-    
+  var key = document.getElementById("key").value;
+  
   reader.addEventListener("load", function () {
     document.getElementsByTagName('img')[0].src = reader.result;
-    var key = document.getElementById("key").value;
     
     let data = new FormData();
     data.append('key', key);
