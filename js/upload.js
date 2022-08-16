@@ -1,5 +1,5 @@
 const url_vars = new URLSearchParams(queryString);
-if(url_vars.has('id') && url_vars.has('id')) {
+if(url_vars.has('id') && url_vars.has('file')) {
   load(url_vars.get('id'), url_vars.get('file'));
 }
 
