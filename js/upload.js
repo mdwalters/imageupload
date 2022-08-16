@@ -29,7 +29,5 @@ function error(data) {
 }
 
 function showMe(data) {
-  var id = data['data']['id'];
-  var file = data['data']['image']['filename'];
-  document.getElementById('bbcode').textContent = `https://i.ibb.co/${id}/${title}`;
+  document.getElementById('bbcode').textContent = data['data']['thumb']['url'];
 }
