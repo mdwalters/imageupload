@@ -1,6 +1,6 @@
 const url_vars = new URLSearchParams(queryString);
-if(url_vars.has('file')) {
-  load(url_vars.get('file'));
+if(url_vars.has('id') && url_vars.has('id')) {
+  load(url_vars.get('id'), url_vars.get('file'));
 }
 
 function upload() {
@@ -43,3 +43,4 @@ function showMe(data) {
 
 function load(id, title) {
   location.replace(`https://i.ibb.co/${id}/${title}`);
+}
