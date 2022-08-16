@@ -1,10 +1,12 @@
 function upload() {
+
   let img = document.getElementById('image').files[0];
+
   let reader = new FileReader();
-  
+    
   reader.addEventListener("load", function () {
     document.getElementsByTagName('img')[0].src = reader.result;
-    
+
     let data = new FormData();
     data.append('key', '71260637fa6e63bff7f0bb6c6279ca4b');
     data.append('image', img);
@@ -25,9 +27,10 @@ function upload() {
 }
 
 function error(data) {
-  alert('Error! Images must be JPG, PNG, BMP, GIF, TIF, WEBP or HEIC. 32 MB max.');
+  alert('Error! Images must be JPG, PNG, BMP, GIF, TIF, WEBP or HEIC. 32 MB max.' + data);
 }
 
 function showMe(data) {
-  document.getElementById('bbcode').textContent = data['data']['thumb']['url'];
+  let url = data['data']['url'];
+  document.getElementById('bbcode').textContent = url;
 }
