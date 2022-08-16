@@ -38,7 +38,7 @@ function error(data) {
 function showMe(data) {
   var id = data['data']['id'];
   var file = data['data']['image']['filename'];
-  document.getElementById('bbcode').textContent = `https://imageupload.ml/?id=${id}&file=${file}`;
+  document.getElementById('bbcode').textContent = `https://${window.location.hostname}/?id=${id}&file=${file}`;
 }
 
 function load(id, title) {
