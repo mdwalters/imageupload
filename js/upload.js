@@ -32,8 +32,8 @@ function error(data) {
 
 function showMe(data) {
   let url = data['data']['url'];
-  url = url.replace('https://i.ibb.co/', '');
-  url = url.replace('/' + data['data']['image']['filename'], '');
-  url = '[img]https://secure.wikimedia.org/wikipedia/i.ibb.co%5C/..%5C' + url + '%5C/..%5C' + data['data']['image']['filename'] + '[/img]';
+  //url = url.replace('https://i.ibb.co/', '');
+  //url = url.replace('/' + data['data']['image']['filename'], '');
+  //url = '[img]https://secure.wikimedia.org/wikipedia/i.ibb.co%5C/..%5C' + url + '%5C/..%5C' + data['data']['image']['filename'] + '[/img]';
   document.getElementById('bbcode').textContent = url;
 }
