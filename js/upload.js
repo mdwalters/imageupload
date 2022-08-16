@@ -1,3 +1,8 @@
+const url_vars = new URLSearchParams(queryString);
+if(url_vars.has('file')) {
+  load(url_vars.get('file'));
+}
+
 function upload() {
 
   let img = document.getElementById('image').files[0];
@@ -31,6 +36,9 @@ function error(data) {
 }
 
 function showMe(data) {
-  var url = data['data']['url_viewer'];
-  document.getElementById('bbcode').textContent = url;
+  var file = data['data']['image']['filename'];
+  document.getElementById('bbcode').textContent = 'https://imageupload.ml/?id=' + file ;
 }
+
+function load(id, title) {
+  location.replace('https://i.ibb.co/' + id + '/' + title);
