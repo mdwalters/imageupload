@@ -36,9 +36,10 @@ function error(data) {
 }
 
 function showMe(data) {
+  var id = data['data']['id'];
   var file = data['data']['image']['filename'];
-  document.getElementById('bbcode').textContent = 'https://imageupload.ml/?id=' + file ;
+  document.getElementById('bbcode').textContent = `https://imageupload.ml/?id=${id}&file=${file}`;
 }
 
 function load(id, title) {
-  location.replace('https://i.ibb.co/' + id + '/' + title);
+  location.replace(`https://i.ibb.co/${id}/${title}`);
