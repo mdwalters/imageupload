@@ -6,9 +6,10 @@ function upload() {
     
   reader.addEventListener("load", function () {
     document.getElementsByTagName('img')[0].src = reader.result;
-
+    var key = document.getElementById("key").value;
+    
     let data = new FormData();
-    data.append('key', 'ac0903c5eb58adac4c2edc31e5d06093');
+    data.append('key', key);
     data.append('image', img);
 
     $.ajax({
