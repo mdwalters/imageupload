@@ -8,7 +8,7 @@ function upload() {
     document.getElementsByTagName('img')[0].src = reader.result;
 
     let data = new FormData();
-    data.append('key', 'ac0903c5eb58adac4c2edc31e5d06093');
+    data.append('key', '71260637fa6e63bff7f0bb6c6279ca4b');
     data.append('image', img);
 
     $.ajax({
