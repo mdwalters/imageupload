@@ -3,12 +3,12 @@ function upload() {
   let img = document.getElementById('image').files[0];
 
   let reader = new FileReader();
-    
+
   reader.addEventListener("load", function () {
     document.getElementsByTagName('img')[0].src = reader.result;
 
     let data = new FormData();
-    data.append('key', '71260637fa6e63bff7f0bb6c6279ca4b');
+    data.append('key', 'ac0903c5eb58adac4c2edc31e5d06093');
     data.append('image', img);
 
     $.ajax({
@@ -27,10 +27,9 @@ function upload() {
 }
 
 function error(data) {
-  alert('Error! Images must be JPG, PNG, BMP, GIF, TIF, WEBP or HEIC. 32 MB max.' + data);
+  alert('Error! Images must be JPG, PNG, BMP, GIF, TIF, WEBP or HEIC. 32 MB max.');
 }
 
 function showMe(data) {
-  let url = data['data']['url'];
-  document.getElementById('bbcode').textContent = url;
+  document.getElementById('bbcode').textContent = data['data']['url'];
 }
