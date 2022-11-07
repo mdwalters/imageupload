@@ -1,5 +1,3 @@
-document.getElementById("upload").addEventListener("click", upload);
-
 function upload() {
 
   let img = document.getElementById('image').files[0];
